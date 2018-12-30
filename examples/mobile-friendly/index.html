@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pico-payer</title>
+		<script src="../../picoplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				PicoPlayer('pico-container', 'cart.p8.png');
+			});
+		</script>
+	</head>
+	<body>
+    <!-- Remove cented class to remove canvas centering -->
+		<div id="pico-container">
+			<div class="buttons">
+					<button id="pico-up" style="grid-area: up" onclick="PicoPress(3, 0)">up</button>
+					<button id="pico-down" style="grid-area: down" onclick="PicoPress(3, 0)">down</button>
+					<button id="pico-left" style="grid-area: left" onclick="PicoPress(3, 0)">left</button>
+					<button id="pico-right" style="grid-area: right" onclick="PicoPress(3, 0)">right</button>
+
+					<button id="pico-a" style="grid-area: a" onclick="PicoPress(3, 0)">a</button>
+					<button id="pico-b" style="grid-area: b" onclick="PicoPress(3, 0)">b</button>
+					<div class="square_hack"></div>
+			</div>
+		</div>
+	</body>
+</html>
