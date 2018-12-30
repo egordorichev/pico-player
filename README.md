@@ -10,3 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   PicoPlayer('pico-container', 'cart.p8.png');
 });
 ```
+
+## Thanks
+
+Big thanks to [@Eiyeron](https://github.com/Eiyeron), who made the mobile theme, as well as to [@AfBu](https://github.com/AfBu/PicoLoader), who wrote the first version of this library 3 years ago.
