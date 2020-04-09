@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>pico-payer</title>
+		<title>PICO-Player</title>
+		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <style>
+      html, body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        background: #ffffff;
+      }
+      .wrapper {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        border: 0px;
+        width: 512px;
+        height: 512px;
+        background: black;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        image-rendering: pixelated;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+    </style>
+	</head>
+	<body>
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<!-- Web Player -->
+			<div id="pico-container"></div>
+		</div>
+		<!-- Script -->
 		<script src="../../picoplayer.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function(event) {
 				PicoPlayer('pico-container', 'cart.p8.png');
 			});
 		</script>
-	</head>
-	<body>
-		<div id="pico-container"></div>
-		<style>
-/* Let the browser scale the canvas */
-.pixel_perfect {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
-  border: 0px;
-}
-
-/* Give canvas a proper size and pixel perfect scaling */
-canvas {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
-  border: 0px;
-  width: 512px;
-  height: 512px;
-  background: black;
-  /* For nice loading */
-}
-		</style>
 	</body>
 </html>

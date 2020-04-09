@@ -1,35 +1,35 @@
-body, html {
-  padding: 0;
-  margin: 0;
+html, body {
+  height: 100%;
 }
 
-/* Let the browser scale the canvas */
-.pixel_perfect {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
-  border: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
 }
 
-/* Give canvas a proper size and pixel perfect scaling */
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 canvas {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
   border: 0px;
   width: 512px;
   height: 512px;
   background: black;
-  /* For nice loading */
-}
-
-.centered {
-  margin: 40px auto;
-  width: 512px;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 }
