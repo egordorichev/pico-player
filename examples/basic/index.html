@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>pico-payer</title>
+		<title>PICO-Player</title>
+		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<!-- Web Player -->
+			<div id="pico-container"></div>
+		</div>
+		<!-- Script -->
 		<script src="../../picoplayer.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
 		<script>
 			document.addEventListener("DOMContentLoaded", function(event) {
 				PicoPlayer('pico-container', 'cart.p8.png');
 			});
 		</script>
-	</head>
-	<body>
-    <!-- Remove cented class to remove canvas centering -->
-		<div id="pico-container" class="centered"></div>
 	</body>
 </html>
