@@ -1,16 +1,36 @@
-# pico-player
-Magic js library, that allows you to run PICO-8 carts in browser without exporting them
+# PICO-Player
+Javascript wrapper that allow you to use PICO-8 web player outside official [Lexaloffle BBS](https://www.lexaloffle.com/bbs/).
 
 ## Usage
-
-See `examples/minimal` for minimal example. The library must run on a server, otherwise, cart loading will fail.
-
+**Vanilla JavaScript**
 ```js
-document.addEventListener("DOMContentLoaded", function(event) {
-  PicoPlayer('pico-container', 'cart.p8.png');
+document.addEventListener("DOMContentLoaded", function(event) { 
+	PicoPlayer('container', 'cart.p8.png');
 });
 ```
 
-## Thanks
+**jQuery**
+```js
+$(document).ready(function () {
+	PicoPlayer('container', 'cart.p8.png');
+});
+```
 
-Big thanks to [@Eiyeron](https://github.com/Eiyeron), who made the mobile theme, as well as to [@AfBu](https://github.com/AfBu/PicoLoader), who wrote the first version of this library 3 years ago.
+*Note: you need to serve the page over HTTP to avoid `COULD NOT ACCESS CART` error.*
+
+## Features
+* Embedding PICO-8 using only one simple javascript command
+* Send button states to web player
+* Pause, Reset cart, Set or toggle volume (mute)
+* Basic examples included
+
+## Authors
+* **[Egor Dorichev](https://github.com/EgorDorichev)** - *Author and Maintainer*
+* **[Florian Dormont](https://github.com/Eiyeron)** - *Mobile Template*
+* **[Petr Kratina](https://github.com/AfBu)** - *Initial Work*
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing Code
+We'd love to accept your patches! If you have improvements, send us your pull requests!
