@@ -96,3 +96,23 @@ function PicoReset() {
 
   Module.resumeMainLoop();
 }
+
+window.addEventListener('keydown', (e) => {
+  if (e.target.localName != 'input') {
+    switch (e.keyCode) {
+      case 37: // left
+      case 39: // right
+        e.preventDefault();
+        break;
+      case 38: // up
+      case 40: // down
+        e.preventDefault();
+        break;
+      default:
+        break;
+        }
+    }
+}, {
+  capture: true,
+  passive: false
+});
